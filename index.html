@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TikTok Callback</title>
+</head>
+<body>
+  <h1>TikTok OAuth Callback</h1>
+  <p>If you see a <code>?code=XYZ</code> in the URL, copy it into your backend.</p>
+  <script>
+    // Automatically show the code if present
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code");
+    if (code) {
+      document.write("<p><b>Code:</b> " + code + "</p>");
+    }
+  </script>
+</body>
+</html>
